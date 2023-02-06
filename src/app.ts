@@ -9,6 +9,7 @@ loadEnv();
 
 import { handleApplicationErrors } from "@/middlewares";
 import {
+  hotelsRouter,
   usersRouter,
   authenticationRouter,
   eventsRouter,
@@ -28,6 +29,7 @@ app
   .use("/enrollments", enrollmentsRouter)
   .use("/tickets", ticketsRouter)
   .use("/payments", paymentsRouter)
+  .use("/hotels", hotelsRouter)
   .use(handleApplicationErrors);
 
 export function init(): Promise<Express> {
